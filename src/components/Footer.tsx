@@ -43,7 +43,7 @@ const Footer = () => {
             <h4 className="font-heading font-semibold mb-4 text-sm uppercase tracking-wider text-primary-foreground/80">Contact</h4>
             <ul className="space-y-3 text-sm text-primary-foreground/60">
               <li className="flex items-center gap-2"><Mail size={14} className="text-accent" /> hello@bridgebyte.com</li>
-              <li className="flex items-center gap-2"><Phone size={14} className="text-accent" /> +880 1XXX-XXXXXX</li>
+              <li className="flex items-center gap-2"><Phone size={14} className="text-accent" /> +880 1814-201601</li>
               <li className="flex items-start gap-2"><MapPin size={14} className="text-accent mt-0.5" /> Dhaka, Bangladesh</li>
             </ul>
           </div>
