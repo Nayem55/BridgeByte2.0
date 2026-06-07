@@ -546,7 +546,7 @@ function Why() {
             }}
           >
             {[
-              ["150+", "Projects delivered across Bangladesh"],
+              ["17+", "Projects delivered across Bangladesh"],
               ["98%",  "Client satisfaction rate"],
               ["40%",  "Average efficiency gains reported"],
             ].map(([num, label], i) => (
