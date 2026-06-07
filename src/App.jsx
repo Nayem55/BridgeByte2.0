@@ -264,7 +264,7 @@ function Hero() {
           {/* Stats */}
           <div className="flex items-center gap-9 flex-wrap">
             {[
-              ["150+", "Businesses Served"],
+              ["17+", "Businesses Served"],
               ["98%",  "Client Retention"],
               ["40%",  "Avg. Efficiency Gain"],
             ].map(([num, label], i) => (
@@ -477,7 +477,7 @@ const REASONS = [
   { icon: "🇧🇩", title: "Bangladesh-First Approach",    desc: "We understand the local market, regulatory environment, and the real challenges Bangladeshi businesses face every day." },
   { icon: "🧠", title: "Saas & Automation Expertise",     desc: "We don't just build apps — we embed intelligence into your workflows so your team can focus on growth, not repetitive admin." },
   { icon: "🛡️", title: "Enterprise-Grade Reliability",  desc: "Scalable architecture, robust security, and 99.9% uptime SLAs — even for fast-moving startups and SMEs." },
-  { icon: "🤝", title: "Dedicated Partnership Model",   desc: "Every client gets a dedicated team. We're not a vendor — we're a long-term technology partner invested in your success." },
+  { icon: "🤝", title: "Built for Long-Term Stability",   desc: "We focus on secure development and provide ongoing maintenance and support to keep your product reliable after launch." },
 ];
 
 function Why() {
@@ -933,7 +933,7 @@ function Footer() {
               Contact
             </h4>
             <ul className="list-none m-0 p-0 grid gap-2.5">
-              {[["✉", "bridgebyte.bd@gmail.com"],["Ph", "+880 1814-201601"], ["📍", "Dhaka, Bangladesh"]].map(([icon, text]) => (
+              {[["✉", "bridgebyte.bd@gmail.com"],["Ph", "01980-284861"], ["📍", "Dhaka, Bangladesh"]].map(([icon, text]) => (
                 <li key={text} className="flex items-center gap-2 text-[0.83rem] font-light">
                   <span className="flex-shrink-0" style={{ color: "#A78BFA" }}>{icon}</span>
                   {text}
