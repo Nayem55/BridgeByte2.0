@@ -818,7 +818,7 @@ function CTA() {
           </p>
           <div className="flex justify-center gap-3.5 flex-wrap">
             <a
-              href="mailto:hello@bridgebyte.com"
+              href="mailto:bridgebyte.bd@gmail.com"
               className="inline-flex items-center gap-2 rounded-[10px] text-[0.95rem] font-medium text-white btn-glow transition-all duration-200 hover:-translate-y-0.5"
               style={{
                 background: "linear-gradient(135deg,#6B3FF6,#2563EB)",
@@ -933,7 +933,7 @@ function Footer() {
               Contact
             </h4>
             <ul className="list-none m-0 p-0 grid gap-2.5">
-              {[["✉", "hello@bridgebyte.com"],["Ph", "+880 1814-201601"], ["📍", "Dhaka, Bangladesh"]].map(([icon, text]) => (
+              {[["✉", "bridgebyte.bd@gmail.com"],["Ph", "+880 1814-201601"], ["📍", "Dhaka, Bangladesh"]].map(([icon, text]) => (
                 <li key={text} className="flex items-center gap-2 text-[0.83rem] font-light">
                   <span className="flex-shrink-0" style={{ color: "#A78BFA" }}>{icon}</span>
                   {text}
