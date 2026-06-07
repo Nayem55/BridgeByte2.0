@@ -206,7 +206,7 @@ function Hero() {
               className="text-[0.75rem] font-medium uppercase tracking-[0.08em]"
               style={{ color: "#A78BFA", fontFamily: "var(--font-body)" }}
             >
-              AI-Powered Business Software
+              Professional Business Software
             </span>
           </div>
 
