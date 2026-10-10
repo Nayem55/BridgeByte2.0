@@ -57,6 +57,15 @@ const workViews = {
   },
 };
 
+const countUpFeatures = [
+  ['01', 'Accounting & vouchers', 'Record sales, purchases, payments, receipts and journals in one disciplined ledger.'],
+  ['02', 'POS & inventory', 'Keep stock, pricing, sales and movement visible as transactions happen.'],
+  ['03', 'Financial reporting', 'Move from entries to trial balance, profit and loss, cash flow and balance sheet reports.'],
+  ['04', 'Manufacturing control', 'Plan production, manage bills of materials and follow operations from input to output.'],
+  ['05', 'VAT-ready operations', 'Support Bangladesh VAT workflows with practical Mushak 6.2.1 and 6.3 exports.'],
+  ['06', 'Team accountability', 'Give the right people access to the right work, with attendance and audit visibility.'],
+];
+
 function scrollToId(id) {
   document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
@@ -64,10 +73,8 @@ function scrollToId(id) {
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeService, setActiveService] = useState(0);
-  const [activeWork, setActiveWork] = useState('Retail operations');
   const service = services[activeService];
   const ServiceIcon = service.icon;
-  const work = workViews[activeWork];
 
   const go = (id) => {
     setMenuOpen(false);
@@ -97,7 +104,6 @@ function App() {
         </nav>
         <div className="container hero-content">
           <div className="hero-copy">
-            <div className="hero-kicker reveal"><span className="pulse-dot" /> Bangladesh / systems partner / 2024—now</div>
             <h1 className="reveal delay-1">Close the gap<br />between <em>business</em><br />and technology.</h1>
             <p className="hero-intro reveal delay-2">BridgeByte connects the systems, data, people and workflows your business depends on—so technology starts doing the work it promised.</p>
             <div className="hero-actions reveal delay-3">
@@ -181,31 +187,21 @@ function App() {
         </div>
       </section>
 
-      <section className="section architecture" id="architecture">
+      <section className="section work countup-section" id="work">
         <div className="container">
-          <div className="section-heading"><div className="eyebrow">Under the surface</div><h2>Architecture should feel like a conversation.</h2><p>We do not drop a tool into your business and walk away. We connect the layers—so an action in one place creates useful context in the next.</p></div>
-          <div className="arch-map" aria-label="BridgeByte architecture map">
-            <div className="arch-line a" /><div className="arch-line b" /><div className="arch-line c" /><div className="arch-line d" />
-            <div className="arch-node a"><span>01 / INPUT</span><strong>People</strong><small>customers, teams, partners</small></div>
-            <div className="arch-node b"><span>02 / MEMORY</span><strong>Data</strong><small>clean, shared, available</small></div>
-            <div className="arch-node c"><span>03 / MOTION</span><strong>Workflows</strong><small>rules, alerts, action</small></div>
-            <div className="arch-node d"><span>04 / OUTPUT</span><strong>Decisions</strong><small>visible, timely, useful</small></div>
-            <div className="arch-node core"><span>BRIDGEBYTE / CORE</span><strong>Your business</strong><small>one connected operating layer</small></div>
+          <div className="countup-intro">
+            <div className="section-heading"><div className="eyebrow">Featured product</div><h2>CountUp puts the whole operation in view.</h2></div>
+            <p>A Bangladesh-ready business platform for teams that need their accounting, inventory, reporting and day-to-day work to agree.</p>
           </div>
-        </div>
-      </section>
-
-      <section className="section work" id="work">
-        <div className="container">
-          <div className="work-intro">
-            <div className="section-heading"><div className="eyebrow">Selected work</div><h2>Technology that earns its place.</h2></div>
-            <div className="work-switch" role="tablist" aria-label="Featured work examples">
-              {Object.keys(workViews).map((key) => <button key={key} className={activeWork === key ? 'active' : ''} onClick={() => setActiveWork(key)} role="tab" aria-selected={activeWork === key}>{key}</button>)}
+          <div className="countup-panel">
+            <div className="countup-overview">
+              <img src="/countup-logo.png" alt="CountUp by BridgeByte" />
+              <p>One practical operating system for the financial, inventory and production work that keeps a business moving.</p>
+              <a className="countup-cta" href="mailto:bridgebyte.bd@gmail.com?subject=CountUp%20product%20enquiry">Explore CountUp <ArrowUpRight size={15} /></a>
             </div>
-          </div>
-          <div className="case-study">
-            <div className="case-art"><div className="case-core"><img src={mark} alt="" /><span>{work.core}</span></div></div>
-            <div className="case-copy"><div><div className="eyebrow">{work.eyebrow}</div><h3>{work.title}</h3><p>{work.copy}</p><a className="text-link" href="mailto:bridgebyte.bd@gmail.com?subject=I%27d%20like%20a%20similar%20system">Discuss a similar system <ArrowUpRight size={15} /></a></div><div className="case-stat"><div><strong>{work.statA}</strong><span>{work.statALabel}</span></div><div><strong>{work.statB}</strong><span>{work.statBLabel}</span></div></div></div>
+            <div className="countup-feature-grid">
+              {countUpFeatures.map(([number, title, copy]) => <article className="countup-feature" key={number}><span>{number} / COUNTUP</span><h3>{title}</h3><p>{copy}</p></article>)}
+            </div>
           </div>
         </div>
       </section>
