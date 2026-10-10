@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "BridgeByte"
+description = "A distinctive BridgeByte technology studio website that connects business needs with practical digital systems, from ERP and automation to websites, apps, and AI solutions."
+version = "1.0.0"
+id = "artifacts/bridgebyte-site"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 22304
+
+[services.development]
+run = "pnpm --filter @workspace/bridgebyte-site run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/bridgebyte-site", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/bridgebyte-site/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "22304"
+BASE_PATH = "/"
